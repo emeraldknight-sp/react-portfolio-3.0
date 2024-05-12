@@ -13,3 +13,9 @@ interface Link {
   url: string;
   icon: React.ReactNode;
 }
+
+interface Inputs {
+  name: string;
+  email: string;
+  message: string;
+}
