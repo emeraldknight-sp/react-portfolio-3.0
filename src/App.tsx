@@ -1,17 +1,18 @@
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Scheduling } from "./pages/Scheduling";
+import { Home } from "./pages/Home";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/scheduling",
+    element: <Scheduling />,
+  },
+]);
+
 export function App() {
-  return (
-    <div>
-      <header>
-        <nav>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </nav>
-      </header>
-      <main></main>
-      <footer></footer>
-    </div>
-  )
+  return <RouterProvider router={router} />;
 }
