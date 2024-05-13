@@ -11,11 +11,24 @@ interface Project {
 interface Link {
   name: string;
   url: string;
-  icon: React.ReactNode;
 }
 
 interface Inputs {
   name: string;
   email: string;
   message: string;
+}
+
+interface MenuItem {
+  text: string;
+  url: string;
+}
+
+interface MenuContextProviderProps {
+  children: React.ReactNode;
+}
+
+interface MenuContextProps {
+  option: string;
+  setOption: (item: string) => void;
 }
