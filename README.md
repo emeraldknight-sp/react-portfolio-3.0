@@ -5,14 +5,14 @@
 </p>
 
 <p align="center">
-Este projeto é uma vitrine versátil que reúne meus projetos e habilidades de desenvolvimento, oferecendo uma visão abrangente do meu trabalho. Com uma abordagem centrada em boas práticas de design e desenvolvimento, cada projeto é apresentado de forma envolvente, destacando as tecnologias e soluções empregadas. Convido você a explorar essa jornada através do meu portfólio, que reflete meu compromisso com a excelência técnica e estética na criação de experiências digitais memoráveis.
+Este é um portfólio que reúne projetos com habilidades e conhecimentos diversos de programação, desenvolvimento web e web design oferecendo uma visão abrangente do meu trabalho. Com uma abordagem centrada em boas práticas de design e desenvolvimento, cada projeto é apresentado de uma forma, destacando as tecnologias e soluções empregadas.
 </p>
 
 <p align="center">
   <a href="#technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#licence">Licença</a>
+  <a href="#license">Licença</a>
 </p>
 
 <p align="center">
@@ -20,8 +20,6 @@ Este projeto é uma vitrine versátil que reúne meus projetos e habilidades de 
 </p>
 
 <br>
-
-
 
 ## 🚀 Tecnologias
 
@@ -39,7 +37,10 @@ Este projeto é uma vitrine versátil que reúne meus projetos e habilidades de 
 ## 💻 Projeto
 
 <p id="project">
-Este portfólio foi desenvolvido com um conjunto de tecnologias modernas que proporcionam uma experiência excepcional. Utilizei o React como base, aproveitando os poderosos recursos do framework para criar componentes reutilizáveis e uma interface dinâmica. A estilização foi feita com Tailwind CSS, permitindo a criação de estilos encapsulados e responsivos. A biblioteca React Icons adicionou ícones elegantes aos elementos. Tudo isso, combinado com o gerenciamento de pacotes pelo pnpm e o bundling eficiente proporcionado pelo Webpack, resultou em um portfólio otimizado e responsivo que destaca minha paixão pelo desenvolvimento e a busca constante por excelência.
+Este portfólio é um clone que foi desenvolvido com um conjunto de tecnologias modernas que proporcionam uma experiência excepcional para sua criação. Utilizei o React para criar componentes reutilizáveis com interface dinâmica. A estilização foi feita com Tailwind CSS, permitindo a criação de estilos encapsulados e responsivos.O pacote react-icons é utilizado para adicionar ícones.
+
+Tudo isso foi combinado com o gerenciador de pacotes pnpm resultou em um portfólio otimizado e responsivo que destaca minha dedicação pelo desenvolvimento e a busca constante por excelência.
+
 </p>
 
 ## 🏡 Comandos de execução no projeto
@@ -58,7 +59,7 @@ pnpm dev
 
 ## 🔖 Layout
 
-Você pode [visualizar o layout do projeto](https://br.pinterest.com/pin/501095896056751813/) clicando aqui. É necessário ter conta no [Pinterest](https://figma.com) para salvá-lo em sua conta.
+Você pode [visualizar o layout do projeto](https://br.pinterest.com/pin/501095896056751813/) clicando aqui. É necessário ter conta no [Pinterest](https://br.pinterest.com/) para salvá-lo em sua conta.
 
 <p id="layout">
   <img src=".github/layout.jpg" alt="layout" >
