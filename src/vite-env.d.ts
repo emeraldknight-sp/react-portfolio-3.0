@@ -1,5 +1,7 @@
 /// <reference types="vite/client" />
 
+import { IconType } from "react-icons";
+
 interface Project {
   name: string;
   description: string;
@@ -17,6 +19,10 @@ interface Inputs {
   name: string;
   email: string;
   message: string;
+}
+
+interface MenuSocialMediaProps {
+  flexible: boolean;
 }
 
 interface MenuItem {
