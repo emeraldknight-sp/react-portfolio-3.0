@@ -1,3 +1,5 @@
+import { Project } from "../vite-env";
+
 export const projects: Project[] = [
   {
     name: "Cineverse | Streaming",
