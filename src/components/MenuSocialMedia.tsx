@@ -38,14 +38,14 @@ export function MenuSocialMedia({ flexible }: MenuSocialMediaProps) {
         <li
           key={index}
           className={clsx(
-            "pt-1 pr-11 bg-gray-900 text-gray-500",
+            "pt-1 pr-11 bg-gray-900 text-gray-500 relative",
             !flexible && "bg-transparent text-gray-900",
-            index === 0 && "with-before",
+            flexible && index === 0 && "with-before",
           )}
         >
           <a
             href={media.url}
-            className="flex justify-start items-center gap-1 font-mono group"
+            className="flex justify-start items-center gap-1 font-mono font-bold group"
             target="_blank"
             rel="noopener noreferrer"
             referrerPolicy="no-referrer"
