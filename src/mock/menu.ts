@@ -1,6 +1,6 @@
 export const menu = [
-  { text: "Início", url: "/" },
-  { text: "Sobre", url: "/" },
-  { text: "Projetos", url: "/" },
-  { text: "Contato", url: "/scheduling" },
+  { text: "Início", url: "start" },
+  { text: "Sobre", url: "about" },
+  { text: "Projetos", url: "projects" },
+  { text: "Contato", url: "contact" },
 ];
