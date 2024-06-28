@@ -7,7 +7,7 @@ export function Scheduling() {
       <InlineWidget
         url="https://calendly.com/davidalmeidadev/consultoria-web"
         iframeTitle="Agende uma reunião"
-        styles={{ height: "700px" }}
+        styles={{ height: "700px", minHeight: "1100px" }}
       />
     </Layout>
   );
