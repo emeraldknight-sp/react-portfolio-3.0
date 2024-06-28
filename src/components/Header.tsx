@@ -1,7 +1,7 @@
 import Logo from "../assets/logo.webp";
 import clsx from "clsx";
 import { MdMenu } from "react-icons/md";
-import { MenuContext } from "../context/menuContext";
+import { MenuContext } from "../context/MenuContext";
 import { MouseEvent, useContext } from "react";
 import { menu } from "../mock/menu";
 import { useLocation, useNavigate } from "react-router-dom";

@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { MenuContext } from "../context/menuContext";
+import { MenuContext } from "../context/MenuContext";
 import { Inputs } from "../vite-env";
 
 export function Home() {

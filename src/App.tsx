@@ -2,7 +2,7 @@ import { Home } from "./pages/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Scheduling } from "./pages/Scheduling";
 import { Toaster } from "sonner";
-import { MenuContextProvider } from "./context/menuContext";
+import { MenuContextProvider } from "./context/MenuContext";
 
 const router = createBrowserRouter([
   {
