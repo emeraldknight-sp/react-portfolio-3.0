@@ -1,14 +1,15 @@
 import * as Fa from "react-icons/fa6";
 import ProfilePhoto from "../assets/profile-photo.webp";
+import { Inputs } from "../vite-env";
 import { Layout } from "../components/Layout";
+import { Link, useNavigate } from "react-router-dom";
+import { MenuContext } from "../context/MenuContext";
 import { MenuSocialMedia } from "../components/MenuSocialMedia";
 import { projects } from "../mock/projects";
 import { toast } from "sonner";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
-import { MenuContext } from "../context/MenuContext";
-import { Inputs } from "../vite-env";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { LinkButton } from "../components/LinkButton";
 
 export function Home() {
   const navigate = useNavigate();
@@ -45,25 +46,114 @@ export function Home() {
             />
           </figure>
           <section
-            className="flex flex-col gap-2 md:max-w-[75%]
+            className="flex flex-col gap-4 md:max-w-[75%]
            lg:max-w-[50%]"
           >
             <h1 className="text-3xl md:text-6xl font-mono">
               Transformando conceitos em experiências digitais memoráveis
             </h1>
-            <p className="text-md font-mono">
+            <p className="text-md font-mono mb-10">
               Crie a presença digital que você precisa para o seu negócio.
             </p>
-            <button
-              type="button"
-              className="max-w-fit bg-emerald-400 rounded text-xl font-bold text-gray-900 text-center p-4 mt-8 outline-none hover:bg-white transition-all duration-300"
+            <LinkButton
+              to="/scheduling"
+              variant="primary"
+              size="lg"
               onClick={handleClick}
+              target="_self"
             >
               Entre em contato
-            </button>
+            </LinkButton>
           </section>
         </article>
         <MenuSocialMedia flexible />
+        <section id="about" className="flex flex-col lg:flex-row">
+          <article className="flex flex-col gap-5 flex-1">
+            <h3 className="text-4xl font-bold font-mono leading-[94px]">
+              Sobre mim
+            </h3>
+            <p className="max-w-[300px] text-lg text-emerald-400 before:content-['<p>'] after:content-['</p>'] before:text-emerald-400">
+              <br />
+              Tenho formação acadêmica e na prática venho desenvolvendo diversos
+              projetos em front-end, back-end e mobile, produzindo sites e
+              aplicativos responsivos de alta qualidade e com uma experiência de
+              usuário excepcional.
+              <br />
+            </p>
+          </article>
+          <article className="flex flex-col gap-5 flex-1">
+            <div className="py-11">
+              <div className="border-t-[6px] border-emerald-400"></div>
+            </div>
+            <p className="text-lg">
+              Meu papel como front-end é combinar design e lógica de negócios
+              para obter um produto voltado para o usuário. É necessário um
+              amplo conjunto de habilidades para produzir uma experiência de
+              usuário de qualidade que leve ao cumprimento de suas metas de
+              negócios.
+            </p>
+            <div>
+              <ul className="flex flex-col gap-2">
+                <li className="flex gap-5">
+                  <span className="pt-1">
+                    <rect className="block border-2 border-emerald-400 rounded-full w-4 h-4"></rect>
+                  </span>
+                  <span>
+                    <p className="text-lg leading-6">
+                      Crie sites responsivos que funcionem em uma ampla
+                      variedade de dispositivos
+                    </p>
+                  </span>
+                </li>
+                <li className="flex gap-5">
+                  <span className="pt-1">
+                    <rect className="block border-2 border-emerald-400 rounded-full w-4 h-4"></rect>
+                  </span>
+                  <span>
+                    <p className="text-lg leading-6">
+                      Auxiliar na produção de design limpo e funcional
+                    </p>
+                  </span>
+                </li>
+                <li className="flex gap-5">
+                  <span className="pt-1">
+                    <rect className="block border-2 border-emerald-400 rounded-full w-4 h-4"></rect>
+                  </span>
+                  <span>
+                    <p className="text-lg leading-6">
+                      Preencher a lacuna de comunicação entre designers e
+                      desenvolvedores
+                    </p>
+                  </span>
+                </li>
+                <li className="flex gap-5">
+                  <span className="pt-1">
+                    <rect className="block border-2 border-emerald-400 rounded-full w-4 h-4"></rect>
+                  </span>
+                  <span>
+                    <p className="text-lg leading-6">
+                      Integre seu site em um sistema de gerenciamento de
+                      conteúdo fácil de usar
+                    </p>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <p className="text-lg">
+              Com meu trabalho posso ajudar seu empreendimento a escalar com
+              projetos da mais alta qualidade, dedicado a ser responsivo e
+              testado em uma ampla variedade de dispositivos.
+            </p>
+            <LinkButton
+              to="https://www.linkedin.com/in/davidalmeidadev/"
+              variant="secondary"
+              size="md"
+              target="_blank"
+            >
+              Perfil no LinkedIn
+            </LinkButton>
+          </article>
+        </section>
         <section id="projects" className="flex flex-col gap-4">
           <h3 className="text-4xl font-bold font-mono">Meus projetos</h3>
           <p className="text-md">
