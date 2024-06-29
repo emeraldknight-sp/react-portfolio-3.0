@@ -1,6 +1,8 @@
 /// <reference types="vite/client" />
 
+import { AnchorHTMLAttributes } from "react";
 import { IconType } from "react-icons";
+import { LinkProps } from "react-router-dom";
 
 interface Project {
   name: string;
@@ -37,4 +39,13 @@ interface MenuContextProviderProps {
 interface MenuContextProps {
   option: string;
   setOption: (item: string) => void;
+}
+
+interface LinkButtonProps
+  extends LinkProps,
+    Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
+  children: React.ReactNode;
+  variant: "primary" | "secondary";
+  size: "md" | "lg";
+  onClick?: () => void;
 }
