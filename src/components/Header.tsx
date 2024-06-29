@@ -4,7 +4,7 @@ import { MdMenu } from "react-icons/md";
 import { MenuContext } from "../context/MenuContext";
 import { MouseEvent, useContext } from "react";
 import { menu } from "../mock/menu";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export function Header() {
   const { option, setOption } = useContext(MenuContext);
@@ -39,27 +39,31 @@ export function Header() {
     setOption(selectedOption);
   };
 
+  const toggleMenu = () => {
+    console.log("LOG:");
+  };
+
   return (
     <header
       id="start"
       className="flex items-center px-4 h-16 shadow-md shadow-black-500 fixed top-0 left-0 z-50 w-full bg-gray-900"
     >
       <div className="flex justify-between container mx-auto">
-        <a
-          href="/"
+        <Link
+          to="/"
           target="_self"
           className="flex items-center font-bold outline-none"
         >
-          <img
-            src={Logo}
-            alt="logotipo website david almeida"
-            width={40}
-            height={40}
-          />
+          <img src={Logo} width={40} height={40} alt="logotipo website" />
           David Almeida
-        </a>
+        </Link>
         <nav className="flex justify-center items-center">
-          <button type="button" className="outline-none md:hidden">
+          <button
+            type="button"
+            className="outline-none md:hidden"
+            aria-label="abrir menu"
+            onClick={toggleMenu}
+          >
             <MdMenu size={24} />
           </button>
           <ul className="hidden md:flex md:gap-4">
@@ -75,6 +79,7 @@ export function Header() {
                       : "after:text-transparent before:text-transparent",
                   )}
                   onClick={(e) => handleClick(e, item.url)}
+                  aria-current={option === item.text ? "page" : undefined}
                 >
                   &nbsp;{item.text}&nbsp;
                 </a>

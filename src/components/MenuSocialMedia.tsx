@@ -45,17 +45,19 @@ export function MenuSocialMedia({ flexible }: MenuSocialMediaProps) {
         >
           <a
             href={media.url}
-            className="flex justify-start items-center gap-1 font-mono font-bold group"
+            className="flex justify-start items-center gap-1 font-mono font-bold group outline-none"
             target="_blank"
             rel="noopener noreferrer"
             referrerPolicy="no-referrer"
+            title={`Acesse meu ${media.name}`}
           >
             <span
               className={
                 "flex justify-start items-center gap-1 transition-all ease-[cubic-bezier(.5,.12,.46,.88)] duration-300 transform -translate-x-full opacity-0 group-hover:opacity-100 group-hover:translate-x-0 relative -z-40 group-hover:z-10 group-hover:text-white"
               }
             >
-              <Io.IoIosArrowRoundForward size={20} /> {media.icon} {media.name}
+              <Io.IoIosArrowRoundForward size={20} aria-hidden={true} />{" "}
+              {media.icon} {media.name}
             </span>
             <span
               className={`flex justify-start items-center gap-1 transition-all ease-[cubic-bezier(.5,.12,.46,.88)] duration-500 transform group-hover:translate-y-4 group-hover:opacity-0 absolute z-10`}
