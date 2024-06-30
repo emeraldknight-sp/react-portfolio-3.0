@@ -6,7 +6,6 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      role="footer"
       aria-label="footer"
       className=" bg-emerald-400 text-gray-900 p-4"
     >

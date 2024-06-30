@@ -48,7 +48,6 @@ export function Header() {
   return (
     <header
       id="start"
-      role="header"
       aria-label="header"
       className="flex items-center px-4 h-16 shadow-md shadow-black-500 fixed top-0 left-0 z-50 w-full bg-gray-900"
     >
