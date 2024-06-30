@@ -2,7 +2,7 @@ import * as Fa from "react-icons/fa6";
 import ProfilePhoto from "../assets/profile-photo.webp";
 import { Inputs } from "../vite-env";
 import { Layout } from "../components/Layout";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { MenuContext } from "../context/MenuContext";
 import { MenuSocialMedia } from "../components/MenuSocialMedia";
 import { projects } from "../mock/projects";
@@ -35,11 +35,14 @@ export function Home() {
   return (
     <div>
       <Layout>
-        <article className="flex flex-col gap-8 lg:flex-row-reverse lg:items-center">
+        <article
+          className="flex flex-col gap-8 lg:flex-row-reverse lg:items-center"
+          aria-label="banner"
+        >
           <figure className="w-full flex justify-center items-center">
             <img
               src={ProfilePhoto}
-              alt="David Almeida profile photo"
+              alt="profile photo"
               className="rounded-full w-full md:w-2/3"
               width={288}
               height={288}
@@ -61,17 +64,25 @@ export function Home() {
               size="lg"
               onClick={handleClick}
               target="_self"
+              title="Agende uma reunião"
             >
               Entre em contato
             </LinkButton>
           </section>
         </article>
         <MenuSocialMedia flexible />
-        <section id="about" className="flex flex-col lg:flex-row">
+        <section
+          id="about"
+          className="flex flex-col lg:flex-row"
+          aria-labelledby="about-heading"
+        >
           <article className="flex flex-col gap-5 flex-1">
-            <h3 className="text-4xl font-bold font-mono leading-[94px]">
+            <h2
+              id="about-heading"
+              className="text-4xl font-bold font-mono leading-[94px]"
+            >
               Sobre mim
-            </h3>
+            </h2>
             <p className="max-w-[300px] text-lg text-emerald-400 before:content-['<p>'] after:content-['</p>'] before:text-emerald-400">
               <br />
               Tenho formação acadêmica e na prática venho desenvolvendo diversos
@@ -83,7 +94,10 @@ export function Home() {
           </article>
           <article className="flex flex-col gap-5 flex-1">
             <div className="py-11">
-              <div className="border-t-[6px] border-emerald-400"></div>
+              <div
+                className="border-t-[6px] border-emerald-400"
+                aria-hidden={true}
+              ></div>
             </div>
             <p className="text-lg">
               Meu papel como front-end é combinar design e lógica de negócios
@@ -149,6 +163,7 @@ export function Home() {
               variant="secondary"
               size="md"
               target="_blank"
+              title="Acesse meu perfil no LinkedIn"
             >
               Perfil no LinkedIn
             </LinkButton>
@@ -160,25 +175,35 @@ export function Home() {
             Projetos criados em&nbsp;
             <span className="text-emerald-400 font-bold">Kenzie Academy</span>
           </p>
-          <ul className="flex flex-col gap-8">
+          <ul className="flex flex-col gap-8" role="list">
             {projects.map((project, index) => (
-              <li key={index} className="flex flex-col gap-4 max-w-[350px]">
-                <h3 className="text-2xl leading-10 font-bold font-mono">
+              <li
+                key={index}
+                className="flex flex-col gap-4 max-w-[350px]"
+                role="listitem"
+              >
+                <h4 className="text-2xl leading-10 font-bold font-mono">
                   {project.name}
-                </h3>
-                <ul className="flex flex-row flex-wrap gap-2">
-                  <span className="font-medium text-md text-gray-300">
+                </h4>
+                <div
+                  className="flex flex-row flex-wrap gap-2"
+                  aria-labelledby="technologies"
+                >
+                  <span
+                    id="techonologies"
+                    className="font-medium text-md text-gray-300"
+                  >
                     Tecnologias:
                   </span>
                   {project.tags.map((tag, index) => (
-                    <li
+                    <span
                       key={index}
                       className="bg-gray-800 text-emerald-400 text-xs font-semibold rounded p-1"
                     >
                       {tag}
-                    </li>
+                    </span>
                   ))}
-                </ul>
+                </div>
                 <p className="text-md text-gray-300 leading-7 ">
                   {project.description}
                 </p>
@@ -196,6 +221,8 @@ export function Home() {
                             ? navigate(link.url)
                             : toast.error("Visualização indisponível!");
                         }}
+                        title={link.name}
+                        aria-label={`go to ${link.name}`}
                       >
                         {index === 0 ? (
                           <Fa.FaGithub />

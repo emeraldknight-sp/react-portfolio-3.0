@@ -33,15 +33,18 @@ export function MenuSocialMedia({ flexible }: MenuSocialMediaProps) {
         "flex flex-col space-y-2",
         flexible && "md:flex-row md:items-center md:space-y-0",
       )}
+      role="list"
+      aria-label="social media"
     >
       {socialMedias.map((media, index) => (
         <li
           key={index}
           className={clsx(
-            "pt-1 pr-11 bg-gray-900 text-gray-500 relative",
+            "pt-1 pr-11 bg-gray-900 text-gray-400 relative",
             !flexible && "bg-transparent text-gray-900",
             flexible && index === 0 && "with-before",
           )}
+          role="listitem"
         >
           <a
             href={media.url}
