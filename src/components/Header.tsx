@@ -1,12 +1,13 @@
+import * as Md from "react-icons/md";
 import Logo from "../assets/logo.webp";
 import clsx from "clsx";
-import { MdMenu } from "react-icons/md";
-import { MenuContext } from "../context/MenuContext";
-import { MouseEvent, useContext } from "react";
-import { menu } from "../mock/menu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { MenuContext } from "../context/MenuContext";
+import { MouseEvent, useContext, useState } from "react";
+import { menu } from "../mock/menu";
 
 export function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const { option, setOption } = useContext(MenuContext);
   const location = useLocation();
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export function Header() {
 
   const handleClick = (e: MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    const selectedOption = e.currentTarget.accessKey;
+    const selectedOption = e.currentTarget.ariaLabel;
 
     if (location.pathname !== "/") {
       navigate("/");
@@ -36,16 +37,19 @@ export function Header() {
       scrollTo(id);
     }
 
-    setOption(selectedOption);
+    selectedOption !== null && setOption(selectedOption);
   };
 
   const toggleMenu = () => {
-    console.log("LOG:");
+    console.log("Menu:", isOpen ? "Fechado" : "Aberto");
+    setIsOpen(!isOpen);
   };
 
   return (
     <header
       id="start"
+      role="header"
+      aria-label="header"
       className="flex items-center px-4 h-16 shadow-md shadow-black-500 fixed top-0 left-0 z-50 w-full bg-gray-900"
     >
       <div className="flex justify-between container mx-auto">
@@ -57,21 +61,20 @@ export function Header() {
           <img src={Logo} width={40} height={40} alt="logotipo website" />
           David Almeida
         </Link>
-        <nav className="flex justify-center items-center">
+        <nav className="flex justify-center items-center" role="navigation">
           <button
             type="button"
             className="outline-none md:hidden"
-            aria-label="abrir menu"
+            aria-label="open menu"
             onClick={toggleMenu}
           >
-            <MdMenu size={24} />
+            {isOpen ? <Md.MdClose size={24} /> : <Md.MdMenu size={24} />}
           </button>
-          <ul className="hidden md:flex md:gap-4">
+          <ul className="hidden md:flex md:gap-4" role="list">
             {menu.map((item, index) => (
-              <li key={index}>
+              <li key={index} role="listitem">
                 <a
                   key={index}
-                  accessKey={item.text}
                   className={clsx(
                     "text-lg outline-none cursor-pointer after:content-['/'] before:content-['/']  hover:text-emerald-400 hover:after:text-emerald-400 hover:before:text-emerald-400 transition-all duration-200",
                     option === item.text
@@ -79,6 +82,8 @@ export function Header() {
                       : "after:text-transparent before:text-transparent",
                   )}
                   onClick={(e) => handleClick(e, item.url)}
+                  accessKey={item.acesskey}
+                  aria-label={item.text}
                   aria-current={option === item.text ? "page" : undefined}
                 >
                   &nbsp;{item.text}&nbsp;
