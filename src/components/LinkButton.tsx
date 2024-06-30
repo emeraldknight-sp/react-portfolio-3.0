@@ -14,7 +14,7 @@ export function LinkButton({
       role="button"
       className={clsx(
         "max-w-fit font-bold font-mono text-gray-900 text-center outline-none transition-all duration-300 rounded after:content-['/>']",
-        size === "md" ? "px-5 py-3 text-md" : "px-10 py-5 text-xl",
+        size === "md" ? "px-5 py-3 text-md" : "px-8 md:px-10 py-5 text-xl",
         variant === "primary"
           ? "bg-emerald-400 hover:bg-white"
           : "bg-white hover:bg-emerald-400",
