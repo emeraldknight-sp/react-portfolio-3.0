@@ -1,15 +1,15 @@
 import * as Fa from "react-icons/fa6";
-import ProfilePhoto from "../assets/viego.jpg";
+import ProfilePhoto from "../assets/profile-photo.webp";
 import { Inputs } from "../vite-env";
 import { Layout } from "../components/Layout";
-import { useNavigate } from "react-router-dom";
+import { LinkButton } from "../components/LinkButton";
 import { MenuContext } from "../context/MenuContext";
 import { MenuSocialMedia } from "../components/MenuSocialMedia";
 import { projects } from "../mock/projects";
 import { toast } from "sonner";
 import { useContext } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { LinkButton } from "../components/LinkButton";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const navigate = useNavigate();
@@ -86,10 +86,10 @@ export function Home() {
             </h2>
             <p className="max-w-[300px] text-lg text-emerald-400 before:content-['<p>'] after:content-['</p>'] before:text-emerald-400">
               <br />
-              Tenho formação acadêmica e na prática venho desenvolvendo diversos
-              projetos em front-end, back-end e mobile, produzindo sites e
-              aplicativos responsivos de alta qualidade e com uma experiência de
-              usuário excepcional.
+              Tenho experiência prática com programação e venho desenvolvendo
+              diversos projetos em front-end, back-end e mobile, produzindo
+              sites e apps responsivos de alta qualidade e com uma experiência
+              de usuário excepcional.
               <br />
             </p>
           </article>
@@ -105,7 +105,7 @@ export function Home() {
               para obter um produto voltado para o usuário. É necessário um
               amplo conjunto de habilidades para produzir uma experiência de
               usuário de qualidade que leve ao cumprimento de suas metas de
-              negócios.
+              negócios. O que eu ofereço:
             </p>
             <div>
               <ul className="flex flex-col gap-2">
@@ -115,8 +115,8 @@ export function Home() {
                   </span>
                   <span>
                     <p className="text-lg leading-6">
-                      Crie sites responsivos que funcionem em uma ampla
-                      variedade de dispositivos
+                      Criação de websites que oferecem uma experiência
+                      consistente e intuitiva em todos os dispositivos.
                     </p>
                   </span>
                 </li>
@@ -126,7 +126,8 @@ export function Home() {
                   </span>
                   <span>
                     <p className="text-lg leading-6">
-                      Auxiliar na produção de design limpo e funcional
+                      Orientação especializada para melhorar a experiência do
+                      usuário e a interface do usuário de seus projetos.
                     </p>
                   </span>
                 </li>
@@ -136,8 +137,8 @@ export function Home() {
                   </span>
                   <span>
                     <p className="text-lg leading-6">
-                      Preencher a lacuna de comunicação entre designers e
-                      desenvolvedores
+                      Serviços de suporte para garantir que seu site permaneça
+                      atualizado e funcione perfeitamente ao longo do tempo.
                     </p>
                   </span>
                 </li>
@@ -147,8 +148,20 @@ export function Home() {
                   </span>
                   <span>
                     <p className="text-lg leading-6">
-                      Integre seu site em um sistema de gerenciamento de
-                      conteúdo fácil de usar
+                      Garantia de que cada site desenvolvido não só seja bonito,
+                      mas também rápido, acessível e fácil de navegar.
+                    </p>
+                  </span>
+                </li>
+                <li className="flex gap-5">
+                  <span className="pt-1">
+                    <rect className="block border-2 border-emerald-400 rounded-full w-4 h-4"></rect>
+                  </span>
+                  <span>
+                    <p className="text-lg leading-6">
+                      Implemento a conexão entre sistemas através de integrações
+                      de APIs eficientes, melhorando a funcionalidade e a
+                      automação de suas aplicações.
                     </p>
                   </span>
                 </li>
