@@ -1,5 +1,5 @@
 import * as Fa from "react-icons/fa6";
-import ProfilePhoto from "../assets/profile-photo.webp";
+import ProfilePhoto from "../assets/viego.jpg";
 import { Inputs } from "../vite-env";
 import { Layout } from "../components/Layout";
 import { useNavigate } from "react-router-dom";
@@ -42,7 +42,7 @@ export function Home() {
           <figure className="w-full flex justify-center items-center">
             <img
               src={ProfilePhoto}
-              alt="profile photo"
+              alt="David Almeida's profile photo"
               className="rounded-full w-full md:w-2/3"
               width={288}
               height={288}
@@ -65,6 +65,7 @@ export function Home() {
               onClick={handleClick}
               target="_self"
               title="Agende uma reunião"
+              aria-label="Entre em contato para agendar uma reunião"
             >
               Entre em contato
             </LinkButton>
@@ -164,13 +165,20 @@ export function Home() {
               size="md"
               target="_blank"
               title="Acesse meu perfil no LinkedIn"
+              aria-label="Acesse meu perfil no LinkedIn"
             >
               Perfil no LinkedIn
             </LinkButton>
           </article>
         </section>
-        <section id="projects" className="flex flex-col gap-4">
-          <h3 className="text-4xl font-bold font-mono">Meus projetos</h3>
+        <section
+          id="projects"
+          className="flex flex-col gap-4"
+          aria-labelledby="projects-heading"
+        >
+          <h3 id="projects-heading" className="text-4xl font-bold font-mono">
+            Meus projetos
+          </h3>
           <p className="text-md">
             Projetos criados em&nbsp;
             <span className="text-emerald-400 font-bold">Kenzie Academy</span>
@@ -181,8 +189,12 @@ export function Home() {
                 key={index}
                 className="flex flex-col gap-4 max-w-[350px]"
                 role="listitem"
+                aria-labelledby={project.name}
               >
-                <h4 className="text-2xl leading-10 font-bold font-mono">
+                <h4
+                  id={project.name}
+                  className="text-2xl leading-10 font-bold font-mono"
+                >
                   {project.name}
                 </h4>
                 <div
@@ -207,11 +219,12 @@ export function Home() {
                 <p className="text-md text-gray-300 leading-7 ">
                   {project.description}
                 </p>
-                <ul className="flex justify-start gap-4 md:gap-8">
+                <ul className="flex justify-start gap-4 md:gap-8" role="list">
                   {project.links.map((link, index) => (
                     <li
                       key={index}
-                      className="flex justify-center items-center gap-2 p-2 border-2 border-gray-800 rounded-full "
+                      className="flex justify-center items-center gap-2 p-2 border-2 border-gray-800 rounded-full"
+                      role="listitem"
                     >
                       <button
                         type="button"
@@ -223,6 +236,7 @@ export function Home() {
                         }}
                         title={link.name}
                         aria-label={`go to ${link.name}`}
+                        tabIndex={0}
                       >
                         {index === 0 ? (
                           <Fa.FaGithub />
@@ -263,7 +277,7 @@ export function Home() {
                   </div>
                   <input
                     type="text"
-                    id="first-name"
+                    id="name"
                     placeholder="Digite seu nome aqui"
                     defaultValue=""
                     {...register("name", { required: true })}
@@ -272,7 +286,7 @@ export function Home() {
                   />
                 </div>
                 {errors.email && (
-                  <span className="text-red-500">
+                  <span className="text-red-500" role="alert">
                     Esse campo é obrigatório.
                   </span>
                 )}
@@ -299,7 +313,7 @@ export function Home() {
                   />
                 </div>
                 {errors.email && (
-                  <span className="text-red-500">
+                  <span className="text-red-500" role="alert">
                     Esse campo é obrigatório.
                   </span>
                 )}
@@ -320,7 +334,7 @@ export function Home() {
                   className="p-2 mb-2 rounded-md focus-visible:ring-2 focus-visible:ring-green-400 outline-none text-gray-800 "
                 />
                 {errors.message && (
-                  <span className="text-red-500">
+                  <span className="text-red-500" role="alert">
                     Esse campo é obrigatório.
                   </span>
                 )}
@@ -329,6 +343,7 @@ export function Home() {
             <button
               type="submit"
               className="min-w-full bg-emerald-400 rounded text-xl font-bold text-gray-900 text-center p-4 mt-4 outline-none hover:bg-white transition-all duration-300"
+              aria-label="Enviar formulário de subscrição"
             >
               Fazer subscrição
             </button>
@@ -341,6 +356,7 @@ export function Home() {
               type="button"
               className="min-w-full bg-gray-200 rounded text-xl font-bold text-gray-900 text-center p-4 outline-none hover:bg-white transition-all duration-300"
               onClick={handleClick}
+              aria-label="Agendar consultoria"
             >
               Agendar consultoria
             </button>
