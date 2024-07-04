@@ -68,3 +68,7 @@ interface MenuOption {
   url: string;
   acesskey: string;
 }
+
+interface CarouselProps {
+  slides: any[];
+}
