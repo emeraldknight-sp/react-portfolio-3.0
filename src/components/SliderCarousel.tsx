@@ -1,8 +1,6 @@
-interface SlideShowProps {
-  slides: any[];
-}
+import { CarouselProps } from "../vite-env";
 
-export function SlideShow({ slides }: SlideShowProps) {
+export function SliderCarousel({ slides }: CarouselProps) {
   return (
     <div className="overflow-hidden mt-[64px] relative before-and-after">
       <div className="flex flex-row animate-caroussel-slide">
