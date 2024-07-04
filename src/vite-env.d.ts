@@ -59,6 +59,10 @@ interface TechnologiesProviderProps {
   children: React.ReactNode;
 }
 
+interface AppContextProps {
+  children: React.ReactNode;
+}
+
 interface MenuOption {
   text: string;
   url: string;
