@@ -49,3 +49,18 @@ interface LinkButtonProps
   size: "md" | "lg";
   onClick?: () => void;
 }
+
+interface TechnologiesProps {
+  name: string;
+  icon: JSX.Element;
+}
+
+interface TechnologiesProviderProps {
+  children: React.ReactNode;
+}
+
+interface MenuOption {
+  text: string;
+  url: string;
+  acesskey: string;
+}
