@@ -14,7 +14,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
@@ -40,7 +40,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
@@ -65,7 +65,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
@@ -90,7 +90,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
@@ -146,7 +146,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
@@ -178,7 +178,7 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
-        name: "Aplicação",
+        name: "Web",
       },
       {
         url: "",
