@@ -13,3 +13,24 @@
   z-index: 20;
   transform: translateX(-100%);
 }
+
+.before-and-after::before,
+.before-and-after::after {
+  content: "";
+  position: absolute;
+  z-index: 20;
+  height: 80px;
+  width: 16px;
+  background: linear-gradient(to right, #111827, transparent);
+}
+
+.before-and-after::before {
+  top: 0;
+  left: 0;
+}
+
+.before-and-after::after {
+  top: 0;
+  right: 0;
+  transform: rotateZ(180deg);
+}
