@@ -14,7 +14,7 @@ export default {
         },
       },
       animation: {
-        "caroussel-slide": `slide 40s linear infinite`,
+        "caroussel-slide": "slide 40s linear infinite",
       },
     },
   },
