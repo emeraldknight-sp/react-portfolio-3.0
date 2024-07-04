@@ -2,7 +2,7 @@ import { Home } from "./pages/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Scheduling } from "./pages/Scheduling";
 import { Toaster } from "sonner";
-import { MenuContextProvider } from "./context/MenuContext";
+import { AppContextProvider } from "./context";
 
 const router = createBrowserRouter([
   {
@@ -17,9 +17,9 @@ const router = createBrowserRouter([
 
 export function App() {
   return (
-    <MenuContextProvider>
+    <AppContextProvider>
       <Toaster position="bottom-right" />
       <RouterProvider router={router} />
-    </MenuContextProvider>
+    </AppContextProvider>
   );
 }
