@@ -5,14 +5,15 @@ import { Layout } from "../components/Layout";
 import { LinkButton } from "../components/LinkButton";
 import { MenuContext } from "../context/MenuContext";
 import { MenuSocialMedia } from "../components/MenuSocialMedia";
+import { SlickCaroussel } from "../components/SlickCarousel";
+import { SliderCarousel } from "../components/SliderCarousel";
+import { TechnologiesContext } from "../context/TechnologiesContext";
 import { projects } from "../mock/projects";
+import { services } from "../mock/services";
 import { toast } from "sonner";
 import { useContext } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import { TechnologiesContext } from "../context/TechnologiesContext";
-import { services } from "../mock/services";
-import { SlideShow } from "../components/SlideShow";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const navigate = useNavigate();
@@ -75,7 +76,7 @@ export function Home() {
         </section>
       </article>
       <MenuSocialMedia flexible />
-      <SlideShow slides={technologies} />
+      <SliderCarousel slides={technologies} />
       <section
         id="about"
         className="flex flex-col lg:flex-row"
@@ -154,74 +155,7 @@ export function Home() {
           Projetos criados em&nbsp;
           <span className="text-emerald-400 font-bold">Kenzie Academy</span>
         </p>
-        <ul className="flex flex-col gap-8" role="list">
-          {projects.map((project, index) => (
-            <li
-              key={index}
-              className="flex flex-col gap-4 max-w-[350px]"
-              role="listitem"
-              aria-labelledby={project.name}
-            >
-              <h4
-                id={project.name}
-                className="text-2xl leading-10 font-bold font-mono"
-              >
-                {project.name}
-              </h4>
-              <div
-                className="flex flex-row flex-wrap gap-2"
-                aria-labelledby="technologies"
-              >
-                <span
-                  id="techonologies"
-                  className="font-medium text-md text-gray-300"
-                >
-                  Tecnologias:
-                </span>
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="bg-gray-800 text-emerald-400 text-xs font-semibold rounded p-1"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-              <p className="text-md text-gray-300 leading-7 ">
-                {project.description}
-              </p>
-              <ul className="flex justify-start gap-4 md:gap-8" role="list">
-                {project.links.map((link, index) => (
-                  <li
-                    key={index}
-                    className="flex justify-center items-center gap-2 p-2 border-2 border-gray-800 rounded-full"
-                    role="listitem"
-                  >
-                    <Link
-                      to={link.url}
-                      className="flex justify-center items-center gap-2 outline-none text-xl"
-                      title={`Acesse a aplicação no ${link.name}`}
-                      aria-label={`acesse a aplicação no ${link.name}`}
-                      tabIndex={0}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      {index === 0 ? (
-                        <Fa.FaGithub />
-                      ) : index === 1 ? (
-                        <Fa.FaArrowUpRightFromSquare />
-                      ) : index === 2 ? (
-                        <Fa.FaAppStore />
-                      ) : (
-                        <Fa.FaGooglePlay />
-                      )}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
+        <SlickCaroussel slides={projects} />
       </section>
       <section id="contact" className="flex flex-row">
         <form
