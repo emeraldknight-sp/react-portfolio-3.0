@@ -1,5 +1,15 @@
 /// <reference types="vite/client" />
 
+interface ImportMetaEnv {
+  readonly VITE_SERVICE_ID: string;
+  readonly VITE_TEMPLATE_ID: string;
+  readonly VITE_PUBLIC_KEY: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
 import { AnchorHTMLAttributes } from "react";
 import { IconType } from "react-icons";
 import { LinkProps } from "react-router-dom";
@@ -20,6 +30,7 @@ interface Link {
 interface Inputs {
   name: string;
   email: string;
+  phone: number;
   message: string;
 }
 
