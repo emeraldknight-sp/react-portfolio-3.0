@@ -1,8 +1,9 @@
+import { AppContextProvider } from "./context";
 import { Home } from "./pages/Home";
+import { Projects } from "./pages/Projects";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Scheduling } from "./pages/Scheduling";
 import { Toaster } from "sonner";
-import { AppContextProvider } from "./context";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "/scheduling",
     element: <Scheduling />,
+  },
+  {
+    path: "/projects",
+    element: <Projects />,
   },
 ]);
 
