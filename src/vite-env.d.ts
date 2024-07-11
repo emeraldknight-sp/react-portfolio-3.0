@@ -18,7 +18,7 @@ interface Project {
   name: string;
   description: string;
   tags: string[];
-  madeIn: string;
+  made: string;
   links: Link[];
 }
 
@@ -82,4 +82,8 @@ interface MenuOption {
 
 interface CarouselProps {
   slides: any[];
+}
+
+interface CardProjectProps {
+  project: Project;
 }
