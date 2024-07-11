@@ -6,7 +6,7 @@ export const projects: Project[] = [
     description:
       "Um website desenhado para exibir informações consumidas de uma base de dados de filmes, séries e animações, emula uma plataforma de streaming.",
     tags: ["React", "Emotion", "React-icons"],
-    madeIn: "Clone",
+    made: "react",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     tags: ["Next", "SASS", "React-icons", "React-lottie"],
     description:
       "Um projeto front-end que faz uso do consumo de API para mostrar dados dinâmicamente ao visitante!",
-    madeIn: "Clone",
+    made: "next",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     tags: ["Next", "Tailwind CSS", "React-icons"],
     description:
       "Um website feito com um poderoso framework de desenvolvimento web voltado para alto desempenho e ranqueamento no SEO.",
-    madeIn: "Clone",
+    made: "next",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     tags: ["React", "Styled-components", "Typescript"],
     description:
       "Um projeto front-end feito para aprensentar informações de acordo com a interação do usuário apresentando informações de forma dinâmica e instantânea!",
-    madeIn: "Dev em Dobro",
+    made: "react",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
     ],
     description:
       "Um website incrível feito com React estilizado pela combincação de SASS com CSS Modules para aprensentar a série Stranger Things e colher leads através de um formulário que envia dados ao Firestore.",
-    madeIn: "DIO",
+    made: "react",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -134,11 +134,11 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Project Weather | Weather App",
+    name: "Weather | Weather App",
     tags: ["React", "Styled-Components", "Axios", "Typescript"],
     description:
       "Um projeto para trabalhar com a previsão do tempo utilizando React.JS, Styled Components e o consumo de APIs!",
-    madeIn: "Autoral",
+    made: "react",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -159,7 +159,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Project HablaMucho | Learning Language",
+    name: "HablaMucho | Learning Language",
     tags: [
       "Next",
       "TailwindCSS",
@@ -170,7 +170,7 @@ export const projects: Project[] = [
     ],
     description:
       "Um projeto desenvolvido para aprendizado de novos idiomas feito com Next.js, Tailwind CSS e consumo de dados pelo Firebase, um banco de dados NoSQL.",
-    madeIn: "Autoral",
+    made: "react",
     links: [
       {
         url: "https://github.com/emeraldknight-sp/react-project-cineverse",
@@ -178,6 +178,31 @@ export const projects: Project[] = [
       },
       {
         url: "https://react-project-cineverse.vercel.app/",
+        name: "Web",
+      },
+      {
+        url: "",
+        name: "iOS",
+      },
+      {
+        url: "",
+        name: "Android",
+      },
+    ],
+  },
+  {
+    name: "Notes | App Development",
+    tags: ["React", "Tailwind", "Sonner", "Radix"],
+    description:
+      "Uma aplicação web criada com React e Tailwind utilizando tecnologias modernas para resultar em um intuitivo bloco de notas que armazena dados em texto e voz com reconhecimento de fala.",
+    made: "react",
+    links: [
+      {
+        url: "https://github.com/emeraldknight-sp/rocketseat-notes/",
+        name: "GitHub",
+      },
+      {
+        url: "https://rocketseat-notes.vercel.app/",
         name: "Web",
       },
       {
