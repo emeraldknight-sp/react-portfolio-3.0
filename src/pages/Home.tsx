@@ -1,41 +1,19 @@
-import * as Fa from "react-icons/fa6";
 import ProfilePhoto from "../assets/profile-photo.webp";
-import { Inputs } from "../vite-env";
+import { Contact } from "../components/Contact";
 import { Layout } from "../components/Layout";
 import { LinkButton } from "../components/LinkButton";
-import { MenuContext } from "../context/MenuContext";
 import { MenuSocialMedia } from "../components/MenuSocialMedia";
 import { SlickCaroussel } from "../components/SlickCarousel";
 import { SliderCarousel } from "../components/SliderCarousel";
+import { MenuContext } from "../context/MenuContext";
 import { TechnologiesContext } from "../context/TechnologiesContext";
 import { projects } from "../mock/projects";
 import { services } from "../mock/services";
-import { toast } from "sonner";
 import { useContext } from "react";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 
 export function Home() {
-  const navigate = useNavigate();
   const technologies = useContext(TechnologiesContext);
   const { setOption } = useContext(MenuContext);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<Inputs>();
-
-  const onSubmit: SubmitHandler<Inputs> = (data) => {
-    console.log(data);
-    toast.success("Sua solicitação foi enviada!");
-  };
-
-  const handleClick = () => {
-    setOption("Contato");
-    navigate("/scheduling");
-    window.scroll(0, 0);
-  };
 
   return (
     <Layout>
@@ -66,10 +44,10 @@ export function Home() {
             to="/scheduling"
             variant="primary"
             size="lg"
-            onClick={handleClick}
             target="_self"
             title="Agende uma reunião"
             aria-label="Entre em contato para agendar uma reunião"
+            onClick={() => setOption("Contato")}
           >
             Entre em contato
           </LinkButton>
@@ -127,15 +105,16 @@ export function Home() {
             </ul>
           </div>
           <p className="text-lg">
-            Com meu trabalho posso ajudar seu empreendimento a escalar com
-            projetos da mais alta qualidade, dedicado a ser responsivo e testado
-            em uma ampla variedade de dispositivos.
+            Com meu trabalho posso contribuir para que seu empreendimento
+            consiga escalar com projetos da mais alta qualidade, dedicado a ser
+            responsivo e testado em uma ampla variedade de dispositivos.
           </p>
           <LinkButton
             to="https://www.linkedin.com/in/davidalmeidadev/"
             variant="secondary"
             size="md"
             target="_blank"
+            rel="noopener noreferrer"
             title="Acesse meu perfil no LinkedIn"
             aria-label="Acesse meu perfil no LinkedIn"
           >
@@ -148,121 +127,34 @@ export function Home() {
         className="flex flex-col gap-4"
         aria-labelledby="projects-heading"
       >
-        <h3 id="projects-heading" className="text-4xl font-bold font-mono">
-          Meus projetos
-        </h3>
-        <p className="text-md">
-          Projetos criados em&nbsp;
-          <span className="text-emerald-400 font-bold">Kenzie Academy</span>
-        </p>
+        <div className="flex flex-col gap-10 py-10 lg:flex-row lg:items-center lg:gap-0">
+          <div className="flex-1">
+            <h3 id="projects-heading" className="text-4xl font-bold font-mono">
+              Meus projetos
+            </h3>
+          </div>
+          <div className="flex-1">
+            <div
+              className="border-t-[6px] border-emerald-400"
+              aria-hidden={true}
+            ></div>
+          </div>
+        </div>
         <SlickCaroussel slides={projects} />
+        <LinkButton
+          variant="primary"
+          size="md"
+          to="/projects"
+          target="_self"
+          title="Ver todos projetos"
+          aria-label="Ver todos projetos"
+          onClick={() => setOption("Projetos")}
+        >
+          Ver todos projetos
+        </LinkButton>
       </section>
       <section id="contact" className="flex flex-row">
-        <form
-          className="w-full md:w-2/3 lg:w-1/2"
-          onSubmit={handleSubmit(onSubmit)}
-        >
-          <fieldset className="flex flex-col gap-4">
-            <legend className="text-4xl font-bold font-mono mb-6">
-              Inscreva-se para ficar por dentro das novidades!
-            </legend>
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="name"
-                className="text-green-400 text-sm font-bold"
-              >
-                Nome completo
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-xl text-gray-400">
-                  <Fa.FaUser />
-                </div>
-                <input
-                  type="text"
-                  id="name"
-                  placeholder="Digite seu nome aqui"
-                  defaultValue=""
-                  {...register("name", { required: true })}
-                  className="pr-3 pl-10 p-2 w-full rounded-md focus-visible:ring-2 focus-visible:ring-green-400 outline-none text-gray-800"
-                  autoComplete="off"
-                />
-              </div>
-              {errors.email && (
-                <span className="text-red-500" role="alert">
-                  Esse campo é obrigatório.
-                </span>
-              )}
-            </div>
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="email"
-                className="text-green-400 text-sm font-bold"
-              >
-                Email
-              </label>
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-xl text-gray-400">
-                  <Fa.FaEnvelope />
-                </div>
-                <input
-                  type="email"
-                  id="email"
-                  defaultValue=""
-                  {...register("email", { required: true })}
-                  placeholder="Digite seu e-mail"
-                  className="pr-3 pl-10 p-2 w-full rounded-md focus-visible:ring-2 focus-visible:ring-green-400 outline-none text-gray-800"
-                  autoComplete="off"
-                />
-              </div>
-              {errors.email && (
-                <span className="text-red-500" role="alert">
-                  Esse campo é obrigatório.
-                </span>
-              )}
-            </div>
-            <div className="flex flex-col gap-1">
-              <label
-                htmlFor="message"
-                className="text-green-400 text-sm font-bold"
-              >
-                Assunto
-              </label>
-              <textarea
-                id="message"
-                rows={8}
-                defaultValue=""
-                {...register("message", { required: true })}
-                placeholder="Informe o assunto que deseja tratar"
-                className="p-2 mb-2 rounded-md focus-visible:ring-2 focus-visible:ring-green-400 outline-none text-gray-800 "
-              />
-              {errors.message && (
-                <span className="text-red-500" role="alert">
-                  Esse campo é obrigatório.
-                </span>
-              )}
-            </div>
-          </fieldset>
-          <button
-            type="submit"
-            className="min-w-full bg-emerald-400 rounded text-xl font-bold text-gray-900 text-center p-4 mt-4 outline-none hover:bg-white transition-all duration-300"
-            aria-label="Enviar formulário de subscrição"
-          >
-            Fazer subscrição
-          </button>
-          <div className="flex flex-row items-center justify-center gap-2 my-4">
-            <div className="w-1/2 border"></div>
-            <span className="text-md">ou</span>
-            <div className="w-1/2 border"></div>
-          </div>
-          <button
-            type="button"
-            className="min-w-full bg-gray-200 rounded text-xl font-bold text-gray-900 text-center p-4 outline-none hover:bg-white transition-all duration-300"
-            onClick={handleClick}
-            aria-label="Agendar consultoria"
-          >
-            Agendar consultoria
-          </button>
-        </form>
+        <Contact />
       </section>
     </Layout>
   );
