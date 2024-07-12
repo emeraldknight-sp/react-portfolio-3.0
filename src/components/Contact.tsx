@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
 export function Contact() {
-  const { setOption } = useContext(MenuContext);
+  const { setOptionMenu } = useContext(MenuContext);
   const navigate = useNavigate();
 
   const {
@@ -41,33 +41,11 @@ export function Contact() {
           toast.error("Sua mensagem não foi enviada!");
         },
       );
-
-    // const { name, email, phone, message } = data;
-
-    // const url =
-    //   "https://cors-anywhere.herokuapp.com/https://app.us22.list-manage.com/subscribe/post?u=26e4fc8c3a4c2e6f774cef549&id=54ab42d1bd&f_id=00f6d2e1f0";
-
-    // const formData = {
-    //   FNAME: name,
-    //   EMAIL: email,
-    //   PHONE: phone,
-    //   MESSAGE: message,
-    // };
-
-    // axios
-    //   .post(url, formData)
-    //   .then(() => {
-    //     toast.success("Sua solicitação foi enviada!");
-    //   })
-    //   .catch((error) => {
-    //     toast.error(`Erro: ${error.message}`);
-    //     console.error("Erro ao enviar solicitação:", error);
-    //   });
   };
 
-  const handleClick = () => {
-    setOption("Contato");
-    navigate("/scheduling");
+  const redirectTo = (option: string, to: string) => {
+    setOptionMenu(option);
+    navigate(to);
     window.scroll(0, 0);
   };
 
@@ -105,30 +83,6 @@ export function Contact() {
             </span>
           )}
         </div>
-        {/* <div className="flex flex-col gap-1">
-          <label htmlFor="phone" className="text-green-400 text-sm font-bold">
-            Telefone
-          </label>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-xl text-gray-400">
-              <Fa.FaPhone />
-            </div>
-            <input
-              type="number"
-              id="phone"
-              placeholder="Digite seu telefone aqui"
-              defaultValue=""
-              {...register("phone", { required: true })}
-              className="pr-3 pl-10 p-2 w-full rounded-md focus-visible:ring-2 focus-visible:ring-green-400 outline-none text-gray-800"
-              autoComplete="off"
-            />
-          </div>
-          {errors.phone && (
-            <span className="text-red-500" role="alert">
-              Esse campo é obrigatório.
-            </span>
-          )}
-        </div> */}
         <div className="flex flex-col gap-1">
           <label htmlFor="email" className="text-green-400 text-sm font-bold">
             Email
@@ -187,7 +141,7 @@ export function Contact() {
       <button
         type="button"
         className="min-w-full bg-gray-200 rounded text-xl font-bold text-gray-900 text-center p-4 outline-none hover:bg-white transition-all duration-300"
-        onClick={handleClick}
+        onClick={() => redirectTo("Contato", "/scheduling")}
         aria-label="Agendar consultoria"
       >
         Agendar consultoria
