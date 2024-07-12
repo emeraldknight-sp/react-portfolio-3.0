@@ -129,21 +129,6 @@ export const TechnologiesContextProvider = ({
     },
   ];
 
-  //  const changeData = () => {
-  //    setTechnologies((prevTech) => {
-  //      const newTech = [...prevTech];
-  //      const firstElement = newTech.shift();
-  //      firstElement && newTech.push(firstElement);
-
-  //      return newTech;
-  //    });
-  //  };
-
-  //  useEffect(() => {
-  //    const intervalId = setInterval(changeData, 5000);
-  //    return () => clearInterval(intervalId);
-  //  }, [changeData]);
-
   return (
     <TechnologiesContext.Provider value={technologies}>
       {children}
