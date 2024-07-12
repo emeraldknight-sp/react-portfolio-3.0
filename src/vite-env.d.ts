@@ -48,8 +48,8 @@ interface MenuContextProviderProps {
 }
 
 interface MenuContextProps {
-  option: string;
-  setOption: (item: string) => void;
+  optionMenu: string;
+  setOptionMenu: (item: string) => void;
 }
 
 interface LinkButtonProps
