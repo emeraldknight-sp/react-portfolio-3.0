@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import ProfilePhoto from "../assets/profile-photo.webp";
 import { Contact } from "../components/Contact";
 import { Layout } from "../components/Layout";
@@ -13,7 +14,14 @@ import { useContext } from "react";
 
 export function Home() {
   const technologies = useContext(TechnologiesContext);
-  const { setOption } = useContext(MenuContext);
+  const { setOptionMenu } = useContext(MenuContext);
+  const navigate = useNavigate();
+
+  const redirectTo = (option: string, to: string) => {
+    setOptionMenu(option);
+    navigate(to);
+    window.scrollTo(0, 0);
+  };
 
   return (
     <Layout>
@@ -47,7 +55,7 @@ export function Home() {
             target="_self"
             title="Agende uma reunião"
             aria-label="Entre em contato para agendar uma reunião"
-            onClick={() => setOption("Contato")}
+            onClick={() => redirectTo("Contato", "/contact")}
           >
             Entre em contato
           </LinkButton>
@@ -148,7 +156,7 @@ export function Home() {
           target="_self"
           title="Ver todos projetos"
           aria-label="Ver todos projetos"
-          onClick={() => setOption("Projetos")}
+          onClick={() => redirectTo("Projetos", "/projects")}
         >
           Ver todos projetos
         </LinkButton>
