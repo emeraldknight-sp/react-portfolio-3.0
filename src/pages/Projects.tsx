@@ -46,7 +46,6 @@ export function Projects() {
             <option value="">todas tecnologias</option>
             <option value="react">React</option>
             <option value="next">Next</option>
-            {/* <option value="react-native">React Native</option> */}
           </select>
         </p>
         <article className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">

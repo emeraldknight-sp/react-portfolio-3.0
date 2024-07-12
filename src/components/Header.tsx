@@ -73,7 +73,6 @@ export function Header() {
               <Md.MdMenu size={24} />
             )}
           </button>
-          {/* <ul className="hidden md:flex md:gap-4" role="list"> */}
           <ul
             className={clsx(
               "flex flex-col gap-4 w-screen h-screen p-4 bg-gray-900 opacity-90 transition-transform duration-500 -translate-x-full absolute top-16 left-0 -z-10 md:top-0 md:flex-row md:right-0 md:w-full md:h-full md:static md:z-0 md:p-0 md:items-center md:gap-2 md:translate-x-0",
