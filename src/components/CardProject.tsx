@@ -1,8 +1,13 @@
 import * as Icon from "react-icons/fa6";
 import { CardProjectProps } from "../vite-env";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 export function CardProject({ project }: CardProjectProps) {
+  const linkNotAvailable = () => {
+    toast.error("Link não disponível");
+  };
+
   return (
     <div
       className="flex flex-col gap-4 p-4 pl-0 flex-1"
@@ -36,25 +41,45 @@ export function CardProject({ project }: CardProjectProps) {
             className="flex justify-center items-center gap-2 p-2 border-2 border-gray-800 rounded-full"
             role="listitem"
           >
-            <Link
-              to={link.url}
-              className="flex justify-center items-center gap-2 outline-none text-xl"
-              title={`Acesse a aplicação no ${link.name}`}
-              aria-label={`acesse a aplicação no ${link.name}`}
-              tabIndex={0}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              {index === 0 ? (
-                <Icon.FaGithub />
-              ) : index === 1 ? (
-                <Icon.FaArrowUpRightFromSquare />
-              ) : index === 2 ? (
-                <Icon.FaAppStore />
-              ) : (
-                <Icon.FaGooglePlay />
-              )}
-            </Link>
+            {!!link.url ? (
+              <Link
+                to={link.url}
+                className="flex justify-center items-center gap-2 outline-none text-xl"
+                title={`Acesse a aplicação no ${link.name}`}
+                aria-label={`Acesse a aplicação no ${link.name}`}
+                tabIndex={0}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                {index === 0 ? (
+                  <Icon.FaGithub />
+                ) : index === 1 ? (
+                  <Icon.FaArrowUpRightFromSquare />
+                ) : index === 2 ? (
+                  <Icon.FaAppStore />
+                ) : (
+                  <Icon.FaGooglePlay />
+                )}
+              </Link>
+            ) : (
+              <div
+                className="flex justify-center items-center gap-2 outline-none text-xl cursor-pointer"
+                title={`Acesse a aplicação no ${link.name}`}
+                aria-label={`Acesse a aplicação no ${link.name}`}
+                tabIndex={0}
+                onClick={linkNotAvailable}
+              >
+                {index === 0 ? (
+                  <Icon.FaGithub />
+                ) : index === 1 ? (
+                  <Icon.FaArrowUpRightFromSquare />
+                ) : index === 2 ? (
+                  <Icon.FaAppStore />
+                ) : (
+                  <Icon.FaGooglePlay />
+                )}
+              </div>
+            )}
           </li>
         ))}
       </ul>
