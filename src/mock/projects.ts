@@ -34,12 +34,12 @@ export const projects: Project[] = [
     made: "next",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/next-project-the-mandalorian",
 
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://next-project-the-mandalorian.vercel.app/",
         name: "Web",
       },
       {
@@ -60,11 +60,11 @@ export const projects: Project[] = [
     made: "next",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/next-project-metin2",
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://next-project-metin2.vercel.app/",
         name: "Web",
       },
       {
@@ -85,11 +85,11 @@ export const projects: Project[] = [
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/react-project-one-piece",
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://react-project-one-piece.vercel.app/",
         name: "Web",
       },
       {
@@ -116,11 +116,11 @@ export const projects: Project[] = [
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/react-project-stranger-things",
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://react-project-stranger-things.vercel.app/",
         name: "Web",
       },
       {
@@ -141,11 +141,11 @@ export const projects: Project[] = [
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/react-project-weather",
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://react-project-weather.vercel.app/",
         name: "Web",
       },
       {
@@ -170,14 +170,14 @@ export const projects: Project[] = [
     ],
     description:
       "Um projeto desenvolvido para aprendizado de novos idiomas feito com Next.js, Tailwind CSS e consumo de dados pelo Firebase, um banco de dados NoSQL.",
-    made: "react",
+    made: "next",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/next-project-habla-mucho",
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://next-project-habla-mucho.vercel.app/",
         name: "Web",
       },
       {
