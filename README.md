@@ -27,12 +27,18 @@ Este é um portfólio que reúne projetos com habilidades e conhecimentos divers
 
 - HTML5, CSS3, JS ES6+
 - [Node e Pnpm](https://nodejs.org/)
-- [React.JS](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Typescript](https://www.typescriptlang.org/docs)
-- [Tailwind CSS](https://tailwindcss.com)
+- [React](https://reactjs.org/)
 - [React-icons](https://react-icons.github.io/react-icons/)
-- [CLSX](https://www.npmjs.com/package/clsx)
+- [React-calendly](https://www.npmjs.com/package/react-calendly#basic-usage)
+- [React-slick](https://react-slick.neostack.com/)
+- [React-hook-form](https://react-hook-form.com/)
+- [React-router-dom](https://reactrouter.com/en/main)
+- [Slick-carousel](https://www.npmjs.com/package/slick-carousel)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Typescript](https://www.typescriptlang.org/docs)
+- [Sonner](https://sonner.emilkowal.ski/)
+- [Clsx](https://www.npmjs.com/package/clsx)
+- [Vite](https://vitejs.dev/)
 
 ## 💻 Projeto
 
