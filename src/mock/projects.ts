@@ -34,11 +34,11 @@ export const projects: Project[] = [
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-cineverse",
+        url: "https://github.com/emeraldknight-sp/react-cineverse",
         name: "GitHub",
       },
       {
-        url: "https://react-project-cineverse.vercel.app/",
+        url: "https://react-cineverse.vercel.app/",
         name: "Web",
       },
       {
@@ -59,12 +59,12 @@ export const projects: Project[] = [
     made: "next",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/next-project-the-mandalorian",
+        url: "https://github.com/emeraldknight-sp/next-the-mandalorian",
 
         name: "GitHub",
       },
       {
-        url: "https://next-project-the-mandalorian.vercel.app/",
+        url: "https://next-the-mandalorian.vercel.app/",
         name: "Web",
       },
       {
@@ -116,11 +116,11 @@ export const projects: Project[] = [
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-stranger-things",
+        url: "https://github.com/emeraldknight-sp/react-mundo-invertido",
         name: "GitHub",
       },
       {
-        url: "https://react-project-stranger-things.vercel.app/",
+        url: "https://react-mundo-invertido.vercel.app/",
         name: "Web",
       },
       {
@@ -141,11 +141,11 @@ export const projects: Project[] = [
     made: "next",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/next-project-metin2",
+        url: "https://github.com/emeraldknight-sp/next-metin2",
         name: "GitHub",
       },
       {
-        url: "https://next-project-metin2.vercel.app/",
+        url: "https://next-metin2.vercel.app/",
         name: "Web",
       },
       {
@@ -166,11 +166,11 @@ export const projects: Project[] = [
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-one-piece",
+        url: "https://github.com/emeraldknight-sp/react-one-piece",
         name: "GitHub",
       },
       {
-        url: "https://react-project-one-piece.vercel.app/",
+        url: "https://react-treasure-map.vercel.app/",
         name: "Web",
       },
       {
@@ -184,18 +184,18 @@ export const projects: Project[] = [
     ],
   },
   {
-    name: "Weather | Weather App",
+    name: "Sky Tracker | Weather App",
     tags: ["React", "Styled-Components", "Axios", "Typescript"],
     description:
       "Um projeto para trabalhar com a previsão do tempo utilizando React.JS, Styled Components e o consumo de APIs!",
     made: "react",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/react-project-weather",
+        url: "https://github.com/emeraldknight-sp/react-sky-tracker",
         name: "GitHub",
       },
       {
-        url: "https://react-project-weather.vercel.app/",
+        url: "https://react-sky-tracker.vercel.app/",
         name: "Web",
       },
       {
@@ -223,11 +223,11 @@ export const projects: Project[] = [
     made: "next",
     links: [
       {
-        url: "https://github.com/emeraldknight-sp/next-project-habla-mucho",
+        url: "https://github.com/emeraldknight-sp/next-habla-mucho",
         name: "GitHub",
       },
       {
-        url: "https://next-project-habla-mucho.vercel.app/",
+        url: "https://next-habla-mucho.vercel.app/",
         name: "Web",
       },
       {
