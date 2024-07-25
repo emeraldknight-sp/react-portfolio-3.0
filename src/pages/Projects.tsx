@@ -44,6 +44,7 @@ export function Projects() {
             onChange={handleChange}
           >
             <option value="">todas tecnologias</option>
+            <option value="html">HTML</option>
             <option value="react">React</option>
             <option value="next">Next</option>
           </select>

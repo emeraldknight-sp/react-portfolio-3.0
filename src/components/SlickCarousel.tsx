@@ -33,7 +33,7 @@ export function SlickCaroussel({ slides }: { slides: Project[] }) {
 
   return (
     <Slider {...settings}>
-      {slides.map((slide, index) => (
+      {slides.slice(0, 10).map((slide, index) => (
         <div key={index}>
           <CardProject project={slide} />
         </div>
