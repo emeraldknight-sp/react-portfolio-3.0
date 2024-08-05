@@ -1,29 +1,39 @@
-<h1 align="center"> Portfólio de Projetos </h1>
+<div align="center">
+  <h1>🔴 Portfolio de Projetos</h1>
+</div>
 
-<p align="center">
-  <img alt="logo" src=".github/logo.png" width="20%">
-</p>
+<div align="center">
+  <img width="100" title="portfolio logo" src=".github/logo.png"/>
+</div>
 
-<p align="center">
-Este é um portfólio que reúne projetos com habilidades e conhecimentos diversos de programação, desenvolvimento web e web design oferecendo uma visão abrangente do meu trabalho. Com uma abordagem centrada em boas práticas de design e desenvolvimento, cada projeto é apresentado de uma forma, destacando as tecnologias e soluções empregadas.
-</p>
+<div align="center">
+  <p>
+    This is a portfolio that brings together projects with diverse skills and knowledge of programming, web development and web design offering a comprehensive view of my work. With an approach focused on good design and development practices, each project is presented in a unique way, highlighting the technologies and solutions used.
+  </p>
+</div>
 
-<p align="center">
-  <a href="#technologies">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#project">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#license">Licença</a>
-</p>
+<div align="center">
+  <a href="https://classic.yarnpkg.com/lang/en/docs/" target="_blank">
+    <img alt="Static Badge" src="https://img.shields.io/badge/pnpm-v9.6.0-green">
+  </a>
+  <a href="https://sass-lang.com/documentation/" target="_blank">
+    <img alt="Static Badge" src="https://img.shields.io/badge/React-18.3.1-blue">
+  </a>
+  <a href="https://michalsnik.github.io/aos/" target="_blank">
+    <img alt="Static Badge" src="https://img.shields.io/badge/React_Router_Dom-6.25.1-e82910">
+  </a>
+  <a href="https://fontawesome.com/" target="_blank">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Tailwind_CSS-3.4.6-yellow.svg">
+  </a>
+  <a href="https://choosealicense.com/" target="_blank">
+    <img alt="Static Badge" src="https://img.shields.io/badge/License-MIT-green.svg">
+  </a>
+  <a href="https://vercel.com/" target="_blank">
+    <img alt="Static Badge" src="https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white">
+  </a>
+</div>
 
-<p align="center">
-  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
-</p>
-
-<br>
-
-## 🚀 Tecnologias
-
-<p id="technologies">Esse projeto foi desenvolvido com as seguintes tecnologias:</p>
+## 🛠️ Technologies
 
 - HTML5, CSS3, JS ES6+
 - [Node e Pnpm](https://nodejs.org/)
@@ -40,37 +50,59 @@ Este é um portfólio que reúne projetos com habilidades e conhecimentos divers
 - [Clsx](https://www.npmjs.com/package/clsx)
 - [Vite](https://vitejs.dev/)
 
-## 💻 Projeto
+## 📣 Funcionalities
 
-<p id="project">
-Este portfólio é um clone que foi desenvolvido com um conjunto de tecnologias modernas que proporcionam uma experiência excepcional para sua criação. Utilizei o React para criar componentes reutilizáveis com interface dinâmica. A estilização foi feita com Tailwind CSS, permitindo a criação de estilos encapsulados e responsivos.O pacote react-icons é utilizado para adicionar ícones.
+- Responsiveness
+- Scroll navigation between sections
+- Animated social media menu
+- Contact button (redirection to an page for )
+- Slider carousel to technologies (hard skills)
+- Slick carousel to projects
+- Form that sends emails through EmailJS
+- Scheduling consultations through a page that renders an embedded Calendly element
 
-Tudo isso foi combinado com o gerenciador de pacotes pnpm resultou em um portfólio otimizado e responsivo que destaca minha dedicação pelo desenvolvimento e a busca constante por excelência.
+## 💿 Installing
 
-</p>
+Install the project with the following command
 
-## 🏡 Comandos de execução no projeto
-
-Instalação das dependências do projeto
-
-```sh
-pnpm install
+```bash
+  pnpm install
 ```
 
-Teste da aplicação em ambiente de desenvolvimento
+## 💻 Running project
 
-```sh
-pnpm dev
+Run this project with the following instruction
+
+```bash
+  pnpm dev
 ```
 
-## 🔖 Layout
+## 🛠️ Running tests
 
-Você pode [visualizar o layout do projeto](https://br.pinterest.com/pin/501095896056751813/) clicando aqui. É necessário ter conta no [Pinterest](https://br.pinterest.com/) para salvá-lo em sua conta.
+To run the tests in the application you can run the following command
 
-<p id="layout">
-  <img src=".github/layout.jpg" alt="layout" >
-</p>
+```
+This project no have any tests to be runned
+```
 
-## 📝 Licença
+## 🚀 Deploy
 
-<p id="licence">Esse projeto está sob a licença MIT.</p>
+To deploy this project, execute
+
+```bash
+  vercel
+```
+
+## 🧰 Used stacks
+
+**Front-end:** HTML5, Tailwind CSS, React, React-slick, React-calendly, React-router-dom, React-icons, Slick-carousel, Sonner, Clsx, @Emaijs/Browser, Typescript, Vite
+
+**Back-end:** Not used
+
+## 📸 Screenshots
+
+![Layout](.github/layout.png)
+
+## 📝 License
+
+This project is under [MIT license](LICENSE).
